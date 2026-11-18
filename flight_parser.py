@@ -6,9 +6,9 @@ Run from the project folder, for example:
 import sys
 
 # TODO: fill in your details: plain ASCII, no spaces or underscores.
-STUDENT_ID = "000RDB000"
-FIRST_NAME = "Firstname"
-LAST_NAME = "Lastname"
+STUDENT_ID = "260ADB178"
+FIRST_NAME = "Paul"
+LAST_NAME = "Alberti"
 
 
 def main(argv: list[str] | None = None) -> int:
