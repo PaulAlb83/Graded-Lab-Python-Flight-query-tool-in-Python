@@ -38,13 +38,7 @@ def _is_valid_datetime(text):
     return True
 # I tried to run the code but I forgot certain function and 
 # claude said me to add that (He give me only structure and I completed):
-def _is_ascii_letters_digits(text):
-    # Parcourir chaque caractère de text
-    for ch in text:
-        # Si ch n'est ni une lettre a-z, ni une lettre A-Z, ni un chiffre 0-9 -> False
-        if not (...):
-            return False
-    return True
+
 
 
 def _is_ascii_letters_digits(text):

@@ -8,7 +8,7 @@ No AI tools were used.
 
 ## Tools used
 
-- Tool and version (e.g. ChatGPT GPT-5, Claude, GitHub Copilot):
+- Tool and version (e.g. ChatGPT GPT-5, Claude, GitHub Copilot): claude with sonnet 5.5 regularly in medium
 
 ## Conversation links
 
