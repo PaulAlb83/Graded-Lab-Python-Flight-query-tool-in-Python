@@ -1,4 +1,35 @@
 """Row validation: airport list loading, single-row checks, record building."""
+import math
+from datetime import datetime
+
+def _has_datetime_format(text):
+    if len(text) != 16:
+        return False
+    for i in range(16):
+        ch = text[i]
+        if i == 4 or i == 7:
+            if ch != "-":
+                return False
+        elif i == 10:
+            if ch != " ":
+                return False
+        elif i == 13:
+            if ch != ":":
+                return False
+        else:
+            if not ("0" <= ch <= "9"):
+                return False
+    return True
+
+
+def _is_valid_datetime(text):
+    if not _has_datetime_format(text):
+        return False
+    try:
+        datetime.strptime(text, "%Y-%m-%d %H:%M")
+    except ValueError:
+        return False
+    return True
 
 
 def load_airports(path: str) -> set[str]:
@@ -7,7 +38,10 @@ def load_airports(path: str) -> set[str]:
     One code per line. Strip whitespace; skip blank lines and lines
     starting with '#'.
     """
-    raise NotImplementedError
+  
+    with open(path, "r", encoding="utf-8") as f:
+        lines = [line.strip() for line in f]
+    return {l for l in lines if l != "" and l[0] != "#"}
 
 
 def validate_row(fields: list[str], airports: set[str]) -> str | None:
