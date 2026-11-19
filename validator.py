@@ -1,4 +1,5 @@
 """Row validation: airport list loading, single-row checks, record building."""
+# j'ai demandé à claude si j'avais besoin d'importer 
 import math
 from datetime import datetime
 
